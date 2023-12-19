@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+// Create a class representing a car with attributes such as model, color, and speed. Implement methods to accelerate and brake.
+
+class car{
+private:
+int model;
+string color;
+int speed = 0;
+public:
+  void accelerate(){
+  cout<<"\nAccelerating..."<<endl;
+    int i = 0;
+    while(i<19){
+      speed = speed + 10; 
+      i = i + 1;
+      cout<<speed<<endl;
+    }
+
+    speed = 200;
+}
+  void show_model(int m){
+    model = m;
+    cout<<"Model: "<<model<<endl;
+  }
+  void show_color(string c){
+    color = c;
+    cout<<"Color: "<<color<<endl;
+  }
+  void brake(){
+  cout<<"\nBraking..."<<endl;
+    int j = 20;
+    while(j > 0){
+    speed -= 10;
+    j -= 1;
+      cout<<speed<<endl;
+      
+}  }
+  void show_speed(){
+    cout<<"The car ";
+      if(speed == 0){
+      cout<<"is stopped."<<endl;
+      }
+    else{
+      cout<<"is Running with speed :" <<speed<<endl;;
+    }
+  }
+};
+
+int main() {
+  car bagati;
+  bagati.show_model(2023);
+  bagati.show_color("Black");
+  bagati.show_speed();
+  bagati.accelerate();
+  bagati.show_speed();
+  bagati.brake();
+  bagati.show_speed();
+}
